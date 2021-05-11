@@ -47,7 +47,7 @@ This is a pretty new project, So there is not many stuff to do right now
   The trigger is not done yet, This is only the screen
 ]]--
 
-local socket = require('socket')
+local socket = require('socket') -- SYSTEM REQUIRES SOCKET. Download luasocket if not already done it or if it already exists in your lua intercepter
 
 function BSoD_TRIGGER_SCREEN1()
   for i = 1, 1000 do 
