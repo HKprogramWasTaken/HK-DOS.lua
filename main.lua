@@ -2,6 +2,8 @@
 -- Created 21-01-14
 --[[
   
+say
+
   H       H   K     K
   H       H   K   K
   H       H   K K
@@ -35,8 +37,7 @@ This is a pretty new project, So there is not many stuff to do right now
 
 ]]
 
--- Socket library
-
+-- Pogrammed with socket lua
 
 --[[
   BSoD_TRIGGER_SCREEN
@@ -46,8 +47,7 @@ This is a pretty new project, So there is not many stuff to do right now
   The trigger is not done yet, This is only the screen
 ]]--
 
-local socket = require("socket")
-
+local socket = require('socket')
 
 function BSoD_TRIGGER_SCREEN1()
   for i = 1, 1000 do 
@@ -105,17 +105,16 @@ else
   BSoD_TRIGGER_SCREEN2()
 end
 
+function echo(i)
+  print(i)
+end
+
 -- Loading.lua
 
 function LoadingScreensaver()
   local RandomLoadingTime = math.random(2,7)
   for i = 1,RandomLoadingTime do
     print("-")
-    socket.sleep(0.25)
-    for i = 1,80 do
-      print("")
-    end
-    print(" \ ")
     socket.sleep(0.25)
     for i = 1,80 do
       print("")
@@ -187,30 +186,6 @@ socket.sleep(0.08)
   Latest updated code: 21-01-18
 ]]--
 
-print("Type your activation code:")
-repeat
-  Password = io.read()
-  if Password ~= "DOS1" then
-    socket.sleep(0.08)
-    print("Checking code...")
-    socket.sleep(0.3)
-    print()
-    socket.sleep(0.08)
-    print("Wrong Activation code")
-    socket.sleep(0.06)
-    print()
-    socket.sleep(0.08)
-    print("Type your activation code:")
-    socket.sleep(0.08)
-  end
-until Password == "DOS1"
-print()
-print("Checking code")
-socket.sleep(0.5)
-print()
-socket.sleep(0.06)
-print("Correct Activation code!")
-socket.sleep(0.3)
 for i = 1,5000 do
   print()
 end
@@ -819,16 +794,10 @@ end
 
 
 
-function TimerSecond()
+function TimerSecond(i)
   -- Start
   if socket then
-    print()
-    print()
-    print("Type how many seconds to wait")
-    print()
-    local TimeSecValue = io.read() -- Read a value of a number
-    print()
-    socket.sleep(TimeSecValue)
+    socket.sleep(i)
     print()
     print("Timer Done")
     print()
@@ -1111,6 +1080,30 @@ function Trash_Can()
   end
 end
 
+
+--[[
+
+  𝙃𝙆𝙥𝙧𝙤𝙜𝙧𝙖𝙢 𝙤𝙧𝙞𝙜𝙞𝙣𝙖𝙡𝙨
+
+]]
+
+
+--[[
+  POTATO Terminal 
+
+  A terminal program created in lua
+]]
+
+
+-- Variables [
+
+-- Logs
+
+
+function PTerminal()
+  local PTerminalVariable = require("PotatoTerminal.lua")
+end
+
 --[[
   Loaded functions!
 
@@ -1137,6 +1130,16 @@ socket.sleep(RandomFunctionSeekDelay)
     SBFail()
   end
 
+for i = 1,800 do
+  print()
+end
+
+print("(C) HKprogram Entertainment system 2021")
+print("Replit.com Edition")
+
+for i = 1,28 do
+  print()
+end
 
 print()
 socket.sleep(0.07)
